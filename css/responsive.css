@@ -1,0 +1,422 @@
+/* ===== RESPONSIVE.CSS ===== */
+/* Archivo dedicado exclusivamente a responsive design */
+
+/* ===== BREAKPOINTS UTILIZADOS ===== */
+/* 
+- Extra Large: 1200px+ (xl)
+- Large: 992px - 1199px (lg) 
+- Medium: 768px - 991px (md)
+- Small: 576px - 767px (sm)
+- Extra Small: 575px y menos (xs)
+*/
+
+/* ===== LARGE SCREENS (1200px+) ===== */
+@media (min-width: 1200px) {
+    .hero-content {
+      max-width: 72rem;
+    }
+    
+    .gradient-text {
+      font-size: 5rem !important;
+    }
+    
+    .navbar-container {
+      max-width: 900px;
+      padding: 14px 28px;
+    }
+    
+    .service-card {
+      padding: 2.5rem;
+    }
+  }
+  
+  /* ===== MEDIUM-LARGE SCREENS (992px - 1199px) ===== */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .hero-content {
+      max-width: 60rem;
+    }
+    
+    .gradient-text {
+      font-size: 4.5rem !important;
+    }
+    
+    .navbar-container {
+      max-width: 850px;
+    }
+  }
+  
+  /* ===== MEDIUM SCREENS (768px - 991px) ===== */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .video-hero-wrapper {
+      min-height: 90vh;
+    }
+    
+    .navbar-container {
+      margin: 15px 30px;
+      padding: 12px 20px;
+      max-width: 750px;
+    }
+    
+    .navbar-brand {
+      font-size: 1.35rem;
+    }
+    
+    .hero-section {
+      min-height: 70vh;
+      padding: 0 1.25rem;
+    }
+    
+    .hero-content {
+      max-width: 90%;
+      padding: 1.5rem 0;
+    }
+    
+    .gradient-text {
+      font-size: 3.5rem !important;
+      line-height: 1.1 !important;
+    }
+    
+    .service-card {
+      padding: 1.75rem;
+    }
+    
+    /* Ocultar video en tablets para mejor rendimiento */
+    .background-video {
+      display: none;
+    }
+    
+    .video-hero-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+      z-index: -3;
+    }
+  }
+  
+  /* ===== SMALL SCREENS - TABLETS (576px - 767px) ===== */
+  @media (min-width: 576px) and (max-width: 767px) {
+    .video-hero-wrapper {
+      min-height: 100vh;
+    }
+    
+    .navbar-container {
+      margin: 10px 20px;
+      padding: 10px 16px;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .navbar-brand {
+      font-size: 1.25rem;
+    }
+    
+    .hero-section {
+      min-height: 70vh;
+      padding: 0 1rem;
+    }
+    
+    .hero-content {
+      max-width: 100%;
+      padding: 2rem 0;
+    }
+    
+    .gradient-text {
+      font-size: 2.75rem !important;
+      line-height: 1.1 !important;
+    }
+    
+    .service-card {
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    /* Grid a 2 columnas en tablets pequeños */
+    #services .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    /* El tercer elemento ocupa ambas columnas */
+    #services .service-card:nth-child(3) {
+      grid-column: 1 / -1;
+      max-width: 50%;
+      margin: 0 auto;
+    }
+    
+    .background-video {
+      display: none;
+    }
+    
+    .video-hero-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+      z-index: -3;
+    }
+  }
+  
+  /* ===== EXTRA SMALL SCREENS - MÓVILES (575px y menos) ===== */
+  @media (max-width: 575px) {
+    .video-hero-wrapper {
+      min-height: 100vh;
+    }
+    
+    .navbar-container {
+      margin: 8px 15px;
+      padding: 8px 12px;
+      flex-direction: column;
+      gap: 12px;
+      border-radius: 20px;
+    }
+    
+    .navbar-brand {
+      font-size: 1.1rem;
+    }
+    
+    .navbar-link {
+      padding: 6px 12px;
+      font-size: 0.85rem;
+    }
+    
+    .cta-button {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      border-radius: 15px;
+    }
+    
+    .hero-section {
+      min-height: 70vh;
+      padding: 0 0.75rem;
+    }
+    
+    .hero-content {
+      padding: 1.5rem 0;
+      max-width: 100%;
+    }
+    
+    .gradient-text {
+      font-size: 2rem !important;
+      line-height: 1.2 !important;
+      margin-bottom: 1rem !important;
+    }
+    
+    .hero-content p {
+      font-size: 1rem !important;
+      margin-bottom: 1.5rem !important;
+      padding: 0 0.5rem;
+    }
+    
+    .hero-content .cta-button {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+    
+    /* Grid a 1 columna en móviles */
+    #services .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    
+    .service-card {
+      padding: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .service-card h4 {
+      font-size: 1.1rem !important;
+    }
+    
+    .service-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    
+    /* Secciones con menos padding en móvil */
+    #services {
+      padding: 3rem 1rem !important;
+    }
+    
+    section.py-20 {
+      padding: 3rem 1rem !important;
+    }
+    
+    /* Footer responsive */
+    footer {
+      padding: 2rem 1rem !important;
+    }
+    
+    footer p {
+      font-size: 0.75rem;
+    }
+    
+    .background-video {
+      display: none;
+    }
+    
+    .video-hero-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+      z-index: -3;
+    }
+  }
+  
+  /* ===== MÓVILES EXTRA PEQUEÑOS (480px y menos) ===== */
+  @media (max-width: 480px) {
+    .navbar-container {
+      margin: 5px 10px;
+      padding: 6px 10px;
+    }
+    
+    .gradient-text {
+      font-size: 1.75rem !important;
+    }
+    
+    .hero-content p {
+      font-size: 0.9rem !important;
+      padding: 0 1rem;
+    }
+    
+    .service-card {
+      padding: 1rem;
+    }
+    
+    .service-card .text-3xl {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* ===== ALTURA DE PANTALLA RESPONSIVE ===== */
+  @media (max-height: 600px) {
+    .hero-section {
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    
+    .hero-content {
+      padding: 1rem 0;
+    }
+    
+    .gradient-text {
+      font-size: 2.5rem !important;
+      margin-bottom: 1rem !important;
+    }
+  }
+  
+  /* ===== ORIENTACIÓN LANDSCAPE EN MÓVILES ===== */
+  @media (max-width: 767px) and (orientation: landscape) {
+    .hero-section {
+      min-height: 100vh;
+      padding: 0.5rem 1rem;
+    }
+    
+    .gradient-text {
+      font-size: 2rem !important;
+      line-height: 1.1 !important;
+    }
+    
+    .hero-content {
+      padding: 1rem 0;
+    }
+    
+    .navbar-container {
+      margin: 5px 15px;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* ===== OPTIMIZACIONES DE RENDIMIENTO ===== */
+  @media (max-width: 768px) {
+    /* Reducir animaciones complejas en móviles */
+    .gradient-text {
+      animation-duration: 5s; /* Más lenta para ahorrar batería */
+    }
+    
+    /* Simplificar transiciones */
+    .service-card {
+      transition: transform 0.2s ease;
+    }
+    
+    .navbar-container {
+      transition: background 0.2s ease;
+    }
+  }
+  
+  /* ===== PREFERS REDUCED MOTION ===== */
+  @media (prefers-reduced-motion: reduce) {
+    .background-video {
+      display: none;
+    }
+    
+    .hero-section::before {
+      z-index: -1;
+    }
+    
+    .gradient-text {
+      animation: none;
+      background: linear-gradient(135deg, #F6F6F6, #C1C1C1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* ===== MODO ALTO CONTRASTE ===== */
+  @media (prefers-contrast: high) {
+    .navbar-container {
+      border: 2px solid #ffffff;
+      background: rgba(0, 0, 0, 0.95);
+    }
+    
+    .service-card {
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .video-overlay {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+  
+  /* ===== PRINT STYLES ===== */
+  @media print {
+    .background-video,
+    .video-overlay,
+    .navbar-container {
+      display: none !important;
+    }
+    
+    .hero-section {
+      background: white;
+      color: black;
+      min-height: auto;
+      padding: 2rem;
+    }
+    
+    .gradient-text {
+      color: black !important;
+      -webkit-text-fill-color: black !important;
+    }
+    
+    .service-card {
+      border: 1px solid #ccc;
+      break-inside: avoid;
+    }
+  }

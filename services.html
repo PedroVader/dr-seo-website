@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Obey Granny</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.65); /* oscuro pero visible */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased text-white relative">
+
+  <!-- VIDEO DE FONDO -->
+  <video autoplay muted loop class="background-video">
+    <source src="./videos/hero-background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+x
+  <header class="w-full py-6 px-6 flex justify-between items-center relative z-10">
+    <h1 class="text-2xl font-bold tracking-tight">Obey Granny</h1>
+    <nav class="space-x-6 text-sm">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="services.html" class="hover:underline">Services</a>
+    </nav>
+  </header>
+
+  <section class="py-20 px-6 max-w-3xl mx-auto relative z-10">
+    <h2 class="text-4xl font-bold mb-8 text-center">Our Services</h2>
+
+    <div class="grid gap-12">
+      <div>
+        <h3 class="text-2xl font-semibold mb-2">Revenue-focused Design</h3>
+        <p class="text-gray-300">No fluff. Just design that converts visitors into customers.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold mb-2">Multi-Channel Campaigns</h3>
+        <p class="text-gray-300">SEO, Ads, Email, Landing Pages – all built to drive sales.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold mb-2">Automation & Tracking</h3>
+        <p class="text-gray-300">We'll help you measure, iterate and scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-xs text-gray-400 relative z-10">
+    &copy; 2025 Obey Granny. All rights reserved.
+  </footer>
+
+</body>
+</html>
