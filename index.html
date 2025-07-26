@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. SEO | Your Website's Digital Health Expert</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="format-detection" content="telephone=no">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/responsive.css" />
@@ -219,80 +221,94 @@
     </div>
   </section>
 
-  <!-- Treatment Plans Section -->
-  <section id="packages" class="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <div class="services-badge">
-          <span class="services-badge-text">Treatment Plans</span>
-        </div>
-        <h3 class="text-5xl md:text-6xl font-bold mb-8 gradient-text">
-          Choose Your Recovery Program
-        </h3>
-        <p class="text-xl text-gray-300 max-w-4xl mx-auto">
-          Every patient needs different care. Select the treatment plan that matches your website's condition and recovery goals.
-        </p>
+<!-- Treatment Plans Section -->
+<section id="packages" class="relative py-20 px-6 overflow-hidden">
+  <!-- Video Background for Treatment Plans -->
+  <div class="absolute inset-0 z-0">
+    <video autoplay muted loop class="w-full h-full object-cover">
+      <source src="public/money-machine.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- Degradado desde arriba -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent"></div>
+    <!-- Degradado desde abajo -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+    <!-- Overlay general para más control -->
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+ 
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-16">
+      <div class="services-badge">
+        <span class="services-badge-text">Treatment Plans</span>
       </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Starter Plan -->
-        <div class="testimonial-card">
-          <div class="text-center mb-6">
-            <span class="feature-tag text-blue-400 mb-4 inline-block">Basic Care</span>
-            <h4 class="text-2xl font-bold gradient-text-medium mb-2">SEO Checkup</h4>
-            <div class="text-4xl font-bold text-white">€997<span class="text-lg font-normal text-gray-400">/month</span></div>
-          </div>
-          <ul class="space-y-3 mb-8 text-gray-300">
-            <li>✓ Monthly health assessment</li>
-            <li>✓ Basic keyword therapy</li>
-            <li>✓ On-page optimization</li>
-            <li>✓ Performance monitoring</li>
-          </ul>
-          <button class="cta-button-secondary w-full py-3">
-            Start Basic Care
-          </button>
+      <h3 class="text-5xl md:text-6xl font-bold mb-8 gradient-text">
+        Choose Your Recovery Program
+      </h3>
+      <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+        Every patient needs different care. Select the treatment plan that matches your website's condition and recovery goals.
+      </p>
+    </div>
+ 
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Starter Plan -->
+      <div class="testimonial-card">  
+        <div class="text-center mb-6">
+          <span class="feature-tag text-blue-400 mb-4 inline-block">Basic Care</span>
+          <h4 class="text-2xl font-bold gradient-text-medium mb-2">SEO Checkup</h4>
+          <div class="text-4xl font-bold text-white">$997<span class="text-lg font-normal text-gray-400">/month</span></div>
         </div>
-
-        <!-- Pro Plan -->
-        <div class="testimonial-card" style="transform: scale(1.05); border-color: #10b981;">
-          <div class="text-center mb-6">
-            <span class="feature-tag text-green-400 mb-4 inline-block">Most Popular</span>
-            <h4 class="text-2xl font-bold text-purple-400 mb-2">SEO Recovery</h4>
-            <div class="text-4xl font-bold text-white">€2,497<span class="text-lg font-normal text-gray-400">/month</span></div>
-          </div>
-          <ul class="space-y-3 mb-8 text-gray-300">
-            <li>✓ Everything in Basic Care</li>
-            <li>✓ Advanced link therapy</li>
-            <li>✓ Content surgery</li>
-            <li>✓ Technical SEO treatment</li>
-            <li>✓ Weekly progress reports</li>
-          </ul>
-          <button class="cta-button w-full py-3">
-            Start Recovery Program
-          </button>
+        <ul class="space-y-3 mb-8 text-gray-300">
+          <li>✓ Monthly health assessment</li>
+          <li>✓ Basic keyword therapy</li>
+          <li>✓ On-page optimization</li>
+          <li>✓ Performance monitoring</li>
+        </ul>
+        <button class="cta-button-secondary w-full py-3">
+          Start Basic Care
+        </button>
+      </div>
+ 
+      <!-- Pro Plan -->
+      <div class="testimonial-card" style="transform: scale(1.05); border-color: #10b981;">
+        <div class="text-center mb-6">
+          <span class="feature-tag text-green-400 mb-4 inline-block">Most Popular</span>
+          <h4 class="text-2xl font-bold text-purple-400 mb-2">SEO Recovery</h4>
+          <div class="text-4xl font-bold text-white">$2,497<span class="text-lg font-normal text-gray-400">/month</span></div>
         </div>
-
-        <!-- Enterprise Plan -->
-        <div class="testimonial-card">
-          <div class="text-center mb-6">
-            <span class="feature-tag text-purple-400 mb-4 inline-block">Premium Care</span>
-            <h4 class="text-2xl font-bold gradient-text-medium mb-2">SEO Specialist</h4>
-            <div class="text-4xl font-bold text-white">€4,997<span class="text-lg font-normal text-gray-400">/month</span></div>
-          </div>
-          <ul class="space-y-3 mb-8 text-gray-300">
-            <li>✓ Everything in Recovery</li>
-            <li>✓ Dedicated SEO surgeon</li>
-            <li>✓ Priority emergency care</li>
-            <li>✓ Custom treatment plans</li>
-            <li>✓ 24/7 health monitoring</li>
-          </ul>
-          <button class="cta-button-secondary w-full py-3">
-            Get Specialist Care
-          </button>
+        <ul class="space-y-3 mb-8 text-gray-300">
+          <li>✓ Everything in Basic Care</li>
+          <li>✓ Advanced link therapy</li>
+          <li>✓ Content surgery</li>
+          <li>✓ Technical SEO treatment</li>
+          <li>✓ Weekly progress reports</li>
+        </ul>
+        <button class="cta-button w-full py-3">
+          Start Recovery Program
+        </button>
+      </div>
+ 
+      <!-- Enterprise Plan -->
+      <div class="testimonial-card">
+        <div class="text-center mb-6">
+          <span class="feature-tag text-purple-400 mb-4 inline-block">Premium Care</span>
+          <h4 class="text-2xl font-bold gradient-text-medium mb-2">SEO Specialist</h4>
+          <div class="text-4xl font-bold text-white">$4,997<span class="text-lg font-normal text-gray-400">/month</span></div>
         </div>
+        <ul class="space-y-3 mb-8 text-gray-300">
+          <li>✓ Everything in Recovery</li>
+          <li>✓ Dedicated SEO surgeon</li>
+          <li>✓ Priority emergency care</li>
+          <li>✓ Custom treatment plans</li>
+          <li>✓ 24/7 health monitoring</li>
+        </ul>
+        <button class="cta-button-secondary w-full py-3">
+          Get Specialist Care
+        </button>
       </div>
     </div>
-  </section>
+  </div>
+ </section>
 
   <!-- Stats Section -->
   <section class="py-16 px-6 bg-gradient-to-b from-black to-gray-900">
@@ -446,7 +462,7 @@
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-8 mb-8 text-left">
         <div>
-          <h4 class="font-bold text-white mb-4 gradient-text">Dr. SEO</h4>
+          <h4 class="font-bold text-white mb-4 gradient-text-medium">Dr. SEO</h4>
           <p class="text-gray-400">Your trusted digital health specialist. Diagnosing, treating, and curing website visibility problems since 2020.</p>
         </div>
         <div>
@@ -461,13 +477,11 @@
           <h5 class="font-semibold text-white mb-3">The Practice</h5>
           <ul class="space-y-2">
             <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Dr. SEO</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Patient Success Stories</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Treatment Philosophy</a></li>
           </ul>
         </div>
         <div>
           <h5 class="font-semibold text-white mb-3">Book Appointment</h5>
-          <p class="text-gray-400">hello@drseo.com</p>
+          <p class="text-gray-400">info@teleportmassive.com</p>
           <p class="text-gray-400">+1 (555) 123-4567</p>
         </div>
       </div>
