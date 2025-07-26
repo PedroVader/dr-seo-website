@@ -106,7 +106,6 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 200% 200%;
-  font-style: italic;
   font-size: 2rem;
   line-height: 1.3;
   padding-top: 0.2rem;
@@ -496,6 +495,148 @@ body {
 }
 
 /* ===== TESTIMONIALS SECTION ===== */
+/* ===== MODERN TESTIMONIAL CARDS ===== */
+.testimonial-card-modern {
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid rgba(246, 246, 246, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card-modern:hover {
+  transform: translateY(-5px);
+  border-color: rgba(246, 246, 246, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(246, 246, 246, 0.2), transparent);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  border: 2px solid rgba(246, 246, 246, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card-modern:hover .testimonial-avatar {
+  border-color: rgba(246, 246, 246, 0.3);
+  transform: scale(1.05);
+}
+
+.testimonial-info {
+  flex: 1;
+}
+
+.testimonial-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #F6F6F6;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.testimonial-role {
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.testimonial-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #D1D5DB;
+  margin: 0;
+}
+
+.testimonial-highlight {
+  background: linear-gradient(135deg, #8B5CF6, #A78BFA, #C084FC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Animación opcional para el gradiente */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Fallback para navegadores que no soporten background-clip */
+@supports not (-webkit-background-clip: text) {
+  .testimonial-highlight {
+    color: #A78BFA;
+    background: none;
+  }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .grid.md\\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .testimonial-card-modern {
+    padding: 1.25rem;
+  }
+  
+  .testimonial-avatar {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .testimonial-name {
+    font-size: 0.85rem;
+  }
+  
+  .testimonial-role {
+    font-size: 0.75rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card-modern {
+    padding: 1rem;
+  }
+  
+  .testimonial-header {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* ===== KEEP ORIGINAL TESTIMONIAL CARD FOR OTHER SECTIONS ===== */
 .testimonial-card {
   background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(40, 40, 40, 0.8));
   border: 1px solid rgba(246, 246, 246, 0.1);
@@ -509,28 +650,6 @@ body {
   transform: translateY(-5px);
   border-color: rgba(246, 246, 246, 0.3);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== FAQ SECTION ===== */
-.faq-question {
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.faq-question:hover h4 {
-  opacity: 0.8;
-}
-
-.faq-answer {
-  transition: all 0.3s ease;
-}
-
-.faq-icon {
-  font-weight: bold;
-  min-width: 30px;
-  text-align: center;
 }
 
 /* ===== ADDITIONAL STYLES ===== */
@@ -640,4 +759,181 @@ body {
 /* ===== GLOBAL BOX-SIZING ===== */
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+/* Logo Carousel Animation */
+@keyframes logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-logo-scroll {
+  animation: logo-scroll 25s linear infinite;
+}
+
+/* Pause animation on hover */
+.logo-carousel-container:hover .animate-logo-scroll {
+  animation-play-state: paused;
+}
+
+/* Logo styling */
+.logo-item {
+  min-width: 140px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-item {
+    min-width: 100px;
+  }
+  
+  .logo-item span {
+    font-size: 0.75rem;
+  }
+  
+  .logo-item svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .animate-logo-scroll {
+    animation: logo-scroll 20s linear infinite;
+  }
+  
+  .logo-track {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    min-width: 60px;
+  }
+  
+  .logo-item span {
+    display: none;
+  }
+  
+  .logo-item svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: 0;
+  }
+  
+  .animate-logo-scroll {
+    animation: logo-scroll 15s linear infinite;
+  }
+  
+  .logo-track {
+    gap: 1.5rem;
+  }
+}
+
+/* ===== ANIMATED BORDER EFFECT ===== */
+.featured-plan {
+  position: relative;
+  border: 1px solid transparent !important;
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.9), rgba(40, 40, 40, 0.8));
+}
+
+.animated-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    #8B5CF6,
+    #A78BFA,
+    #C084FC,
+    #E879F9,
+    #F0ABFC,
+    #8B5CF6
+  );
+  background-size: 400% 400%;
+  animation: borderAnimation 3s ease infinite;
+  z-index: -1;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(40, 40, 40, 0.9));
+  border-radius: 18px;
+  z-index: -1;
+}
+
+@keyframes borderAnimation {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
+
+/* ===== GLOW EFFECT (OPCIONAL) ===== */
+.featured-plan::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    rgba(139, 92, 246, 0.3),
+    rgba(167, 139, 250, 0.3),
+    rgba(192, 132, 252, 0.3),
+    rgba(232, 121, 249, 0.3)
+  );
+  border-radius: 22px;
+  filter: blur(8px);
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.featured-plan:hover::after {
+  opacity: 1;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .featured-plan {
+    transform: none !important;
+  }
+  
+  .animated-border {
+    animation-duration: 2s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-border {
+    animation: none;
+    background: linear-gradient(45deg, #8B5CF6, #A78BFA);
+  }
+  
+  .featured-plan::after {
+    display: none;
+  }
 }
