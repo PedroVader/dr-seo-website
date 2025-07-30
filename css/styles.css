@@ -354,6 +354,21 @@ body {
   font-weight: 700;
 }
 
+.gradient-text-big {
+  background: linear-gradient(135deg, #F6F6F6 0%, #C1C1C1 25%, #AFAFAF 50%, #3A3A3A 75%, #F6F6F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  font-size: 6rem;
+  line-height: 1.2;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  box-sizing: border-box;
+  animation: gradient-shift 5s ease infinite;
+  font-weight: 700;
+}
+
 .gradient-text-medium {
   background: linear-gradient(135deg, #F6F6F6 0%, #C1C1C1 25%, #AFAFAF 50%, #3A3A3A 75%, #F6F6F6 100%);
   -webkit-background-clip: text;
