@@ -19,15 +19,10 @@ body {
   left: 50% !important;
   transform: translateX(-50%);
   z-index: 9999 !important;
-  background: transparent;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 25px;
   padding: 12px 24px;
-  max-width: 800px;
+  max-width: 1000px;
   width: calc(100vw - 40px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   box-sizing: border-box !important;
   margin: 0 !important;
