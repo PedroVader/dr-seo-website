@@ -299,13 +299,12 @@ body {
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.6) 100%
+    rgba(0, 0, 0, 0.2) 0%,    /* Very light 20% black */
+    rgba(0, 0, 0, 0.1) 50%,   /* Almost transparent 10% black */
+    rgba(0, 0, 0, 0.2) 100%   /* Very light 20% black */
   );
   z-index: 2;
 }
-
 .video-gradient-bottom {
   position: absolute;
   bottom: 0;
