@@ -1,503 +1,126 @@
-/* ===== COMPLETE RESPONSIVE STYLES FOR ALL PAGES ===== */
+/* ===== ENHANCED RESPONSIVE STYLES ===== */
 
-/* Global overflow fix */
-html, body {
-  overflow-x: hidden !important;
-  max-width: 100% !important;
+/* Reset and Base */
+* {
+  box-sizing: border-box;
 }
 
-/* Base Mobile Styles */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  min-width: 320px;
+}
+
+/* ===== MOBILE STYLES (768px and below) ===== */
 @media (max-width: 768px) {
-  /* Prevent horizontal scroll */
-  body {
-    overflow-x: hidden !important;
+  /* Container width constraints */
+  .container,
+  [class*="max-w-"] {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  /* ===== NAVBAR MOBILE - UNIVERSAL FIX ===== */
+  /* ===== NAVBAR MOBILE ===== */
   .navbar-container {
     position: fixed !important;
-    top: 10px !important;
-    left: 10px !important;
-    right: 10px !important;
+    top: 0.5rem !important;
+    left: 0.5rem !important;
+    right: 0.5rem !important;
     transform: none !important;
-    width: auto !important;
+    width: calc(100% - 1rem) !important;
     max-width: none !important;
-    padding: 10px 16px !important;
-    border-radius: 25px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    box-sizing: border-box !important;
-    margin: 0 !important;
-    z-index: 9999 !important;
+    padding: 0.75rem 1rem !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 1rem !important;
   }
 
   .navbar-logo img {
-    width: 120px !important;
+    height: 2rem !important;
+    width: auto !important;
   }
 
-  .cta-button {
-    padding: 8px 16px !important;
-    font-size: 0.875rem !important;
-  }
-
+  /* Hide phone button, show only essential items */
   .cta-button-phone {
-    display: none !important; /* Hide phone button on mobile to save space */
+    display: none !important;
   }
 
-  .dropdown-button {
-    padding: 8px 12px !important;
+  /* Compact buttons */
+  .cta-button {
+    padding: 0.5rem 1rem !important;
     font-size: 0.875rem !important;
+    border-radius: 0.75rem !important;
   }
 
-  /* Fix dropdown positioning */
-  .dropdown-content {
-    position: absolute !important;
-    top: calc(100% + 8px) !important;
-    left: auto !important;
-    right: 0 !important;
-    transform: translateY(0) !important;
-    max-width: calc(100vw - 40px) !important;
-    margin-right: -10px !important;
-  }
-
-  /* ===== HERO SECTION MOBILE ===== */
+  /* ===== HERO SECTION ===== */
   .hero-section {
     min-height: 100vh;
-    padding: 0 1rem;
+    min-height: 100dvh; /* Dynamic viewport height */
+    padding: 5rem 1rem 2rem;
   }
 
   .hero-content {
-    padding: 2rem 1rem;
-    margin-top: 80px !important; /* Account for fixed navbar */
+    margin-top: 0;
+    gap: 1.5rem;
   }
 
-  .hero-content h2 {
-    font-size: 2.5rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  .hero-content p {
-    font-size: 1.125rem !important;
-    line-height: 1.5 !important;
-    margin-bottom: 2rem !important;
-  }
-
-  /* Hero CTAs */
-  .hero-content .cta-button,
-  .hero-content .cta-button-secondary {
-    width: 100% !important;
-    max-width: 300px !important;
-    margin: 0 auto !important;
-    padding: 1rem !important;
-    font-size: 1rem !important;
-  }
-
-  /* Logo Carousel Mobile */
-  .logo-carousel-container {
-    margin: 2rem 0 !important;
-  }
-
-  .logo-item {
-    min-width: 100px !important;
-  }
-
-  .logo-item span {
-    font-size: 0.75rem !important;
-  }
-
-  /* ===== VIDEO BACKGROUND MOBILE ===== */
+  /* ===== VIDEO BACKGROUND ===== */
+  .video-background,
   .background-video {
-    /* Don't hide the video */
-    display: block;
-    
-    /* Ensure it covers the viewport properly */
-    object-fit: cover;
-    object-position: center;
-    
-    /* Set explicit dimensions */
-    width: 100%;
-    height: 100%;
-    
-    /* Ensure proper positioning */
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    /* Add will-change for better performance */
-    will-change: transform;
-    
-    /* Ensure smooth playback */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  
-  /* Make sure the video container is properly sized */
-  .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  /* Optional: Reduce video quality/size on mobile */
-  .video-hero-wrapper {
-    /* Limit the height on mobile to reduce load */
-    max-height: 100vh;
+    height: 100vh;
+    height: 100dvh;
   }
 
   .video-overlay {
-    background: linear-gradient(
-      135deg,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(0, 0, 0, 0.8) 100%
-    ) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
   }
 
-  /* ===== SERVICES SECTIONS MOBILE ===== */
-  .services-section {
-    padding: 3rem 1rem !important;
+  /* ===== TYPOGRAPHY SCALE ===== */
+  h1, .text-6xl, .text-5xl {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
+    line-height: 1.1 !important;
   }
 
-  .services-section h3 {
-    font-size: 2rem !important;
-    line-height: 1.3 !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .services-section h4 {
-    font-size: 1.5rem !important;
-  }
-
-  /* Service Grid */
-  .services-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-
-  /* Service Cards */
-  .service-card-spectacular {
-    padding: 2rem 1.5rem !important;
-    margin: 0 !important;
-  }
-
-  .service-card-spectacular.featured-card {
-    transform: scale(1) !important; /* Remove scale on mobile */
-  }
-
-  .featured-badge {
-    right: 10px !important;
-    font-size: 0.75rem !important;
-    padding: 4px 12px !important;
-  }
-
-  /* Service Icons */
-  .service-content > div:first-child {
-    width: 60px !important;
-    height: 60px !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  .service-content svg {
-    width: 30px !important;
-    height: 30px !important;
-  }
-
-  /* ===== WEBSITES THAT CONVERT SECTION ===== */
-  .services-section .grid {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-  }
-
-  /* Website Mockup */
-  .services-section img {
-    max-height: 300px !important;
-    object-fit: cover !important;
-  }
-
-  /* Stats Badge */
-  .absolute.top-4.right-4 {
-    top: 0.5rem !important;
-    right: 0.5rem !important;
-    transform: scale(0.85) !important;
-    padding: 0.75rem 1rem !important;
-  }
-
-  .absolute.top-4.right-4 .text-2xl {
-    font-size: 1.25rem !important;
-  }
-
-  /* Fix absolute positioned elements */
-  .absolute.-top-4.-right-4 {
-    top: -0.5rem !important;
-    right: 0.5rem !important;
-  }
-
-  .absolute.-bottom-3.-left-3 {
-    bottom: -0.5rem !important;
-    left: 0.5rem !important;
-  }
-
-  /* ===== TREATMENT SECTION MOBILE ===== */
-  #treatment .grid {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-  }
-
-  .service-card {
-    padding: 1.5rem !important;
-  }
-
-  .service-card img {
-    height: 150px !important;
-  }
-
-  .service-card h4 {
-    font-size: 1.25rem !important;
-  }
-
-  /* Treatment Tags */
-  .service-card .inline-flex {
-    padding: 6px 12px !important;
-    font-size: 0.75rem !important;
-  }
-
-  /* ===== NO MORE FRUSTRATING SECTION ===== */
-  .service-card-spectacular .w-16.h-16 {
-    width: 48px !important;
-    height: 48px !important;
-    margin-bottom: 1rem !important;
-  }
-
-  .service-card-spectacular .w-8.h-8 {
-    width: 24px !important;
-    height: 24px !important;
-  }
-
-  /* ===== TREATMENT PLANS MOBILE ===== */
-  #packages .grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-
-  .testimonial-card {
-    padding: 1.5rem !important;
-  }
-
-  .testimonial-card.featured-plan {
-    transform: scale(1) !important;
-    margin: 0 !important;
-  }
-
-  /* Plan Pricing */
-  .testimonial-card .text-4xl {
-    font-size: 2rem !important;
-  }
-
-  /* ===== STATS SECTION MOBILE ===== */
-  .stats-card {
-    padding: 1rem !important;
-  }
-
-  .stats-card .text-4xl {
-    font-size: 2rem !important;
-  }
-
-  /* ===== TESTIMONIALS CAROUSEL MOBILE ===== */
-  .carousel-card {
-    width: 280px !important;
-    min-height: 180px !important;
-  }
-
-  .testimonial-card-modern {
-    padding: 1.25rem !important;
-  }
-
-  .testimonial-text {
-    font-size: 0.813rem !important;
-    line-height: 1.4 !important;
-  }
-
-  /* ===== FAQ SECTION MOBILE ===== */
-  .faq-item {
-    padding: 1.25rem !important;
-  }
-
-  .faq-question h4 {
-    font-size: 1rem !important;
-    padding-right: 2rem !important;
-  }
-
-  .faq-icon {
-    font-size: 1.5rem !important;
-  }
-
-  /* ===== CTA SECTION MOBILE ===== */
-  section.py-20 {
-    padding: 3rem 1rem !important;
-  }
-
-  section h3 {
-    font-size: 2rem !important;
-    margin-bottom: 1rem !important;
-  }
-
-  section p {
-    font-size: 1.125rem !important;
-  }
-
-  /* ===== FOOTER MOBILE ===== */
-  footer {
-    padding: 2rem 1rem !important;
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-  }
-
-  footer .grid {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-    text-align: center !important;
-  }
-
-  /* Fix footer logo specifically */
-  footer img {
-    margin: 0 auto !important;
-    max-height: 80px !important;
-    max-width: 100% !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain !important;
-  }
-
-  /* Fix the logo container */
-  footer .mb-4 {
-    max-width: 100% !important;
-    overflow: hidden !important;
-  }
-
-  footer a.inline-block {
-    display: inline-block !important;
-    max-width: 100% !important;
-  }
-
-  /* Ensure the logo doesn't have fixed width */
-  footer img[alt="Teleport Massive Logo"] {
-    max-width: 150px !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  footer .flex-wrap {
-    justify-content: center !important;
-    gap: 1rem !important;
-    flex-wrap: wrap !important;
-  }
-
-  /* ===== CONTACT FORM SECTION ===== */
-  .services-section[style*="min-height: 100vh"] {
-    padding: 2rem 1rem !important;
-    min-height: calc(100vh - 80px) !important;
-    margin-top: 80px !important; /* Account for fixed navbar */
-  }
-
-  /* Form Container */
-  form.service-card-spectacular {
-    padding: 1.5rem !important;
-  }
-
-  /* Form Title */
-  h1 {
-    font-size: 2.5rem !important;
+  h2, .text-4xl {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
     line-height: 1.2 !important;
   }
 
-  /* Form Grid - Stack on mobile */
-  form > div:first-child {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
+  h3, .text-3xl {
+    font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
   }
 
-  /* Form Inputs */
-  .form-input {
-    padding: 0.875rem 1rem !important;
-    font-size: 16px !important; /* Prevents zoom on iOS */
+  h4, .text-2xl {
+    font-size: clamp(1.125rem, 4vw, 1.5rem) !important;
   }
 
-  /* Submit Button */
-  button[type="submit"] {
-    padding: 0.875rem 1.5rem !important;
+  p, .text-base {
     font-size: 1rem !important;
+    line-height: 1.6 !important;
   }
 
-  /* Success Message */
-  #successMessage {
-    padding: 1.5rem !important;
-  }
-
-  #successMessage svg {
-    width: 3rem !important;
-    height: 3rem !important;
-  }
-
-  #successMessage h3 {
-    font-size: 1.25rem !important;
-  }
-
-  /* Terms Checkbox */
-  input[type="checkbox"] {
-    width: 1rem !important;
-    height: 1rem !important;
-  }
-
-  /* ===== TEXT SIZE ADJUSTMENTS ===== */
-  .text-6xl {
-    font-size: 2.5rem !important;
-  }
-
-  .text-5xl {
-    font-size: 2rem !important;
-  }
-
-  .text-4xl {
-    font-size: 1.75rem !important;
-  }
-
-  .text-3xl {
-    font-size: 1.5rem !important;
-  }
-
-  .text-2xl {
-    font-size: 1.25rem !important;
-  }
-
-  .text-xl {
-    font-size: 1.125rem !important;
-  }
-
-  /* ===== GRADIENT TEXT MOBILE ===== */
-  .gradient-text {
-    font-size: 2.5rem !important;
-    line-height: 1.2 !important;
+  /* Gradient text adjustments */
+  .gradient-text,
+  .gradient-text-big {
+    font-size: clamp(2rem, 8vw, 3rem) !important;
     white-space: normal !important;
   }
 
   .gradient-text-medium {
-    font-size: 1.5rem !important;
-    white-space: normal !important;
+    font-size: clamp(1.25rem, 5vw, 1.75rem) !important;
   }
 
-  .gradient-text-small {
-    font-size: 1rem !important;
-    white-space: normal !important;
-  }
-
-  /* ===== PADDING/MARGIN ADJUSTMENTS ===== */
-  .px-6 {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+  /* ===== SECTIONS SPACING ===== */
+  section {
+    padding: 3rem 0 !important;
   }
 
   .py-20 {
@@ -505,200 +128,200 @@ html, body {
     padding-bottom: 3rem !important;
   }
 
-  .mb-16 {
-    margin-bottom: 2rem !important;
+  .py-16 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
 
-  .mb-12 {
-    margin-bottom: 1.5rem !important;
+  /* ===== GRID LAYOUTS ===== */
+  .grid,
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
 
+  /* ===== CARDS ===== */
+  .service-card-spectacular,
+  .testimonial-card {
+    padding: 1.5rem !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .featured-card {
+    transform: scale(1) !important;
+  }
+
+  /* ===== BUTTONS ===== */
+  .cta-button,
+  .cta-button-primary,
+  .cta-button-secondary {
+    width: 100% !important;
+    max-width: 20rem !important;
+    margin: 0 auto !important;
+    padding: 1rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* ===== FORMS ===== */
+  .form-input {
+    padding: 0.875rem 1rem !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    border-radius: 0.5rem !important;
+  }
+
+  /* Stack form fields */
+  form .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ===== ABSOLUTE POSITIONED ELEMENTS ===== */
+  [class*="absolute"] {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+    margin: 1rem auto !important;
+  }
+
+  /* ===== CAROUSEL ===== */
+  .carousel-card {
+    width: 85vw !important;
+    max-width: 20rem !important;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 2rem 1rem !important;
+  }
+
+  footer .grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 2rem !important;
+  }
+
+  footer img {
+    max-height: 5rem !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ===== SMALL MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+  /* Even more compact navbar */
+  .navbar-container {
+    padding: 0.625rem 0.75rem !important;
+  }
+
+  .navbar-logo img {
+    height: 1.75rem !important;
+  }
+
+  /* Smaller typography */
+  h1 {
+    font-size: 1.875rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* More compact sections */
+  section {
+    padding: 2rem 0 !important;
+  }
+
+  /* Smaller cards */
+  .service-card-spectacular,
+  .testimonial-card {
+    padding: 1.25rem !important;
+  }
+
+  /* Stack CTAs vertically */
+  .flex-wrap {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
+
+/* ===== LANDSCAPE MOBILE ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.75rem !important;
+  }
+
+  /* Reduce vertical spacing */
   .mb-8 {
     margin-bottom: 1rem !important;
   }
 
-  /* ===== UTILITIES ===== */
-  .max-w-6xl,
-  .max-w-4xl,
-  .max-w-3xl {
-    padding: 0 1rem !important;
-  }
-
-  /* Hide decorative elements on mobile */
-  .absolute.top-\\-100px,
-  .absolute.bottom-\\-100px {
-    display: none !important;
-  }
-
-  /* Fix overflow issues */
-  * {
-    max-width: 100vw !important;
-  }
-
-  section {
-    overflow-x: hidden !important;
-  }
-
-  /* Fix dropdown */
-  .dropdown-content {
-    right: 0 !important;
-    left: auto !important;
+  .mb-6 {
+    margin-bottom: 0.75rem !important;
   }
 }
 
-/* Small Mobile Devices */
-@media (max-width: 480px) {
-  /* Even smaller adjustments for very small screens */
-  .navbar-container {
-    left: 8px !important;
-    right: 8px !important;
-    padding: 8px 12px !important;
+/* ===== TOUCH OPTIMIZATIONS ===== */
+@media (hover: none) {
+  /* Larger touch targets */
+  button,
+  a,
+  .clickable {
+    min-height: 44px;
+    min-width: 44px;
   }
 
-  .navbar-logo img {
-    width: 100px !important;
-  }
-
-  .dropdown-button {
-    font-size: 0.75rem !important;
-    padding: 6px 10px !important;
-  }
-
-  .hero-content h2 {
-    font-size: 2rem !important;
-  }
-
-  .hero-content p {
-    font-size: 1rem !important;
-  }
-
-  .gradient-text {
-    font-size: 2rem !important;
-  }
-
-  .services-badge {
-    padding: 6px 16px !important;
-    font-size: 0.75rem !important;
-  }
-
-  /* Testimonial cards on very small screens */
-  .carousel-card {
-    width: 250px !important;
-  }
-
-  /* Footer image on small screens */
-  footer img {
-    max-width: 120px !important;
-  }
-
-  /* Contact form adjustments */
-  form.service-card-spectacular {
-    padding: 1.25rem !important;
-  }
-
-  h1 {
-    font-size: 2rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-
-  h1 span {
-    display: block !important; /* Stack the title words */
-  }
-
-  /* Even smaller form inputs */
-  .form-input {
-    padding: 0.75rem 0.875rem !important;
-  }
-
-  /* Smaller submit button */
-  button[type="submit"] {
-    padding: 0.75rem 1rem !important;
-    font-size: 0.875rem !important;
-  }
-
-  button[type="submit"] svg {
-    width: 1rem !important;
-    height: 1rem !important;
-  }
-}
-
-/* Landscape Mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-  .hero-section {
-    min-height: 100vh;
-  }
-
-  .hero-content {
-    margin-top: 60px !important;
-    padding: 1rem !important;
-  }
-
-  .hero-content h2 {
-    font-size: 2rem !important;
-  }
-
-  /* Contact form in landscape */
-  .services-section[style*="min-height: 100vh"] {
-    padding: 1.5rem 1rem !important;
-    margin-top: 70px !important;
-  }
-
-  form.service-card-spectacular {
-    max-height: calc(100vh - 100px) !important;
-    overflow-y: auto !important;
-  }
-}
-
-/* Touch Device Optimizations */
-@media (hover: none) and (pointer: coarse) {
-  /* Make touch targets larger */
-  .cta-button,
-  .cta-button-secondary,
-  .dropdown-button,
-  .form-input,
-  button[type="submit"] {
-    min-height: 44px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-  }
-
-  /* Disable hover effects on touch devices */
-  .service-card-spectacular:hover {
+  /* Remove hover states */
+  *:hover {
     transform: none !important;
   }
+}
 
-  .logo-item:hover {
-    opacity: 0.6 !important;
-  }
-
-  /* Better checkbox touch target */
-  label[for="terms"] {
-    padding: 8px 0 !important;
+/* ===== HIGH-RESOLUTION MOBILE ===== */
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 768px) {
+  /* Sharper borders and shadows */
+  .service-card-spectacular,
+  .testimonial-card {
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 }
 
-/* Fix for iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  .video-hero-wrapper {
-    -webkit-overflow-scrolling: touch;
+/* ===== PRINT STYLES ===== */
+@media print {
+  .navbar-container,
+  .video-background,
+  footer {
+    display: none !important;
   }
-
-  .navbar-container {
-    -webkit-backdrop-filter: blur(20px);
+  
+  body {
+    background: white !important;
+    color: black !important;
   }
+}
 
-  /* Prevent iOS zoom on input focus */
-  .form-input,
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    font-size: 16px !important;
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
 
-  /* iOS specific overflow fix */
-  html, body {
-    position: relative !important;
-    overflow-x: hidden !important;
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  /* Already dark by default, but ensure consistency */
+  body {
+    background-color: #000000;
+    color: #ffffff;
   }
 }
