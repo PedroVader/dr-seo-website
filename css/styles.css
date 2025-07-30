@@ -241,7 +241,7 @@ body {
 }
 
 .cta-button-phone {
-  background: linear-gradient(135deg, #8B5CF6, #A78BFA);
+  background: linear-gradient(135deg, #8B5CF6, #00D4FF);
   color: #ffffff !important;
   padding: 10px 20px;
   border-radius: 20px;
@@ -251,19 +251,18 @@ body {
   display: inline-flex;
   align-items: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
   border: none;
   white-space: nowrap;
 }
 
 .cta-button-phone:hover {
-  background: linear-gradient(135deg, #7C3AED, #9F7AEA);
+  background: linear-gradient(135deg, #7C3AED, #00B8E6);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
   text-decoration: none;
   color: #ffffff !important;
 }
-
 /* ===== VIDEO HERO ===== */
 .video-hero-wrapper {
   position: relative;
@@ -372,9 +371,10 @@ body {
 }
 
 .gradient-text-medium {
-  background: linear-gradient(135deg, #F6F6F6 0%, #C1C1C1 25%, #AFAFAF 50%, #3A3A3A 75%, #F6F6F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #00E5FF 0%, #00D4FF 25%, #8B5CF6 50%, #00D4FF 75%, #00E5FF 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
   background-clip: text;
   background-size: 200% 200%;
   font-size: 2rem;
@@ -386,9 +386,10 @@ body {
 }
 
 .gradient-text-small {
-  background: linear-gradient(135deg, #F6F6F6 0%, #C1C1C1 25%, #AFAFAF 50%, #3A3A3A 75%, #F6F6F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #00E5FF 0%, #00D4FF 25%, #8B5CF6 50%, #00D4FF 75%, #00E5FF 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
   background-clip: text;
   background-size: 200% 200%;
   font-style: italic;
@@ -401,9 +402,11 @@ body {
 }
 
 .gradient-text-xs {
-  background: linear-gradient(135deg, #F6F6F6 0%, #C1C1C1 25%, #AFAFAF 50%, #3A3A3A 75%, #F6F6F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #00E5FF 0%, #00D4FF 25%, #8B5CF6 50%, #00D4FF 75%, #00E5FF 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  display: inline-block !important;
   background-clip: text;
   background-size: 200% 200%;
   font-style: italic;
@@ -416,9 +419,11 @@ body {
 }
 
 .gradient-text-tiny {
-  background: linear-gradient(135deg, #F6F6F6 0%, #C1C1C1 25%, #AFAFAF 50%, #3A3A3A 75%, #F6F6F6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #00E5FF 0%, #00D4FF 25%, #8B5CF6 50%, #00D4FF 75%, #00E5FF 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  display: inline-block !important;
   background-clip: text;
   background-size: 200% 200%;
   font-style: italic;
@@ -439,13 +444,30 @@ body {
 }
 
 .gradient-violet {
-  background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 25%, #C084FC 50%, #E879F9 75%, #F0ABFC 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background-size: 200% 200%;
+  background: linear-gradient(135deg, #00E5FF 0%, #00D4FF 25%, #8B5CF6 50%, #00D4FF 75%, #00E5FF 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  display: inline-block !important;
 }
 
+/* Make sure the animation is defined */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
 /* ===== EFECTOS GLOW ===== */
 .glow-effect {
   text-shadow: 0 0 20px rgba(246, 246, 246, 0.3);
