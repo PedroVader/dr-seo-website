@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Teleport Massive</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body style="background-color: #000000; color: #ffffff; margin: 0; padding: 0; font-family: 'Inter', sans-serif;">
+  
+  <!-- Navbar -->
+  <header class="w-full relative z-50" style="width: 100%; position: relative; z-index: 50;">
+    <div class="navbar-container flex justify-between items-center" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" class="navbar-logo">
+        <img src="/public/img/logo-tm-bg-removed.png" alt="Logo" style="width: 150px; height: auto;">
+      </a>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <!-- Dropdown -->
+        <div class="dropdown" style="position: relative;">
+          <button class="dropdown-button" style="display: flex; align-items: center; padding: 0.5rem 1rem; border-radius: 0.5rem;">
+            Services
+            <svg class="dropdown-arrow" style="width: 1rem; height: 1rem; margin-left: 0.25rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="dropdown-content">
+            <div style="padding: 0.5rem 0;">
+              <a href="#" class="dropdown-item">Digital Marketing</a>
+              <a href="#" class="dropdown-item">Public Relations</a>
+              <a href="#" class="dropdown-item">Reputation Management</a>
+            </div>
+          </div>
+        </div>
+        <a href="tel:+12345678900" class="cta-button-phone" style="display: inline-flex; align-items: center;">
+          <svg style="width: 1rem; height: 1rem; margin-right: 0.5rem;" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          +1 (234) 567-8900
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="services-section" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 5rem 1.5rem;">
+    <div class="services-background"></div>
+    <div class="services-overlay"></div>
+    
+    <div style="width: 100%; max-width: 42rem; position: relative; z-index: 10;">
+      <!-- Title -->
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h1 style="font-size: 3.5rem; font-weight: bold; margin-bottom: 1rem;">
+          <span class="gradient-text">Get In</span> 
+          <span class="gradient-violet">Touch</span>
+        </h1>
+        <p style="font-size: 1.25rem; color: #9CA3AF;">
+          Let's discuss how we can help grow your business
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form id="contactForm" class="service-card-spectacular" style="padding: 2.5rem;">
+        <!-- Name Row -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+          <div>
+            <label for="firstName" style="display: block; font-size: 0.875rem; font-weight: 500; color: #D1D5DB; margin-bottom: 0.5rem;">
+              First Name <span style="color: #A78BFA;">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="firstName" 
+              name="firstName"
+              required
+              class="form-input"
+              placeholder="John"
+            >
+          </div>
+          <div>
+            <label for="lastName" style="display: block; font-size: 0.875rem; font-weight: 500; color: #D1D5DB; margin-bottom: 0.5rem;">
+              Last Name <span style="color: #A78BFA;">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="lastName" 
+              name="lastName"
+              required
+              class="form-input"
+              placeholder="Doe"
+            >
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom: 1.5rem;">
+          <label for="email" style="display: block; font-size: 0.875rem; font-weight: 500; color: #D1D5DB; margin-bottom: 0.5rem;">
+            Email Address <span style="color: #A78BFA;">*</span>
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            required
+            class="form-input"
+            placeholder="john.doe@example.com"
+          >
+          <p class="error-message" id="emailError">Please enter a valid email address</p>
+        </div>
+
+        <!-- Phone -->
+        <div style="margin-bottom: 1.5rem;">
+          <label for="phone" style="display: block; font-size: 0.875rem; font-weight: 500; color: #D1D5DB; margin-bottom: 0.5rem;">
+            Phone Number <span style="color: #A78BFA;">*</span>
+          </label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone"
+            required
+            class="form-input"
+            placeholder="+1 (234) 567-8900"
+          >
+          <p class="error-message" id="phoneError">Please enter a valid phone number</p>
+        </div>
+
+        <!-- Message -->
+        <div style="margin-bottom: 1.5rem;">
+          <label for="message" style="display: block; font-size: 0.875rem; font-weight: 500; color: #D1D5DB; margin-bottom: 0.5rem;">
+            Message <span style="color: #A78BFA;">*</span>
+          </label>
+          <textarea 
+            id="message" 
+            name="message"
+            required
+            rows="4"
+            class="form-input"
+            style="resize: none;"
+            placeholder="Tell us about your project..."
+          ></textarea>
+        </div>
+
+        <!-- Terms Checkbox -->
+        <div style="margin-bottom: 2rem;">
+          <label style="display: flex; align-items: flex-start; cursor: pointer;">
+            <input 
+              type="checkbox" 
+              id="terms" 
+              name="terms"
+              required
+              style="margin-top: 0.25rem; width: 1.25rem; height: 1.25rem; background: rgba(0,0,0,0.5); border: 2px solid #374151; border-radius: 0.25rem; cursor: pointer; accent-color: #8B5CF6;"
+            >
+            <span style="margin-left: 0.75rem; font-size: 0.875rem; color: #9CA3AF; line-height: 1.5;">
+              I agree to the <a href="/terms" style="color: #A78BFA; text-decoration: underline;">Terms of Service</a> 
+              and give permission to contact me regarding my inquiry.
+              <span style="color: #A78BFA;">*</span>
+            </span>
+          </label>
+          <p class="error-message" id="termsError">You must accept the terms to continue</p>
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+          type="submit" 
+          class="cta-button-phone"
+          style="width: 100%; justify-content: center; padding: 1rem 1.5rem; font-size: 1.125rem; font-weight: 600; display: flex; align-items: center;"
+        >
+          Send Message
+          <svg style="width: 1.25rem; height: 1.25rem; margin-left: 0.5rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Success Message (Hidden by default) -->
+      <div id="successMessage" class="service-card-spectacular" style="display: none; margin-top: 2rem; padding: 2rem; text-align: center; background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.3);">
+        <svg style="width: 4rem; height: 4rem; margin: 0 auto 1rem; color: #22C55E;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <h3 style="font-size: 1.5rem; font-weight: bold; color: #22C55E; margin-bottom: 0.5rem;">Message Sent!</h3>
+        <p style="color: #9CA3AF;">We'll get back to you within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Form Input Styles */
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #374151;
+      border-radius: 0.5rem;
+      color: white;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+    
+    .form-input:focus {
+      border-color: #8B5CF6;
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    }
+    
+    .form-input::placeholder {
+      color: #6B7280;
+    }
+    
+    /* Error Message Styles */
+    .error-message {
+      margin-top: 0.25rem;
+      font-size: 0.75rem;
+      color: #EF4444;
+      display: none;
+    }
+    
+    .error-message.show {
+      display: block;
+    }
+    
+    /* Form Grid Responsive */
+    @media (max-width: 768px) {
+      form > div:first-child {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    // Form Validation
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Reset errors
+      document.querySelectorAll('.error-message').forEach(error => error.classList.remove('show'));
+      
+      let isValid = true;
+      
+      // Email validation
+      const email = document.getElementById('email').value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        document.getElementById('emailError').classList.add('show');
+        isValid = false;
+      }
+      
+      // Phone validation
+      const phone = document.getElementById('phone').value;
+      const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+      if (!phoneRegex.test(phone) || phone.length < 10) {
+        document.getElementById('phoneError').classList.add('show');
+        isValid = false;
+      }
+      
+      // Terms validation
+      const terms = document.getElementById('terms').checked;
+      if (!terms) {
+        document.getElementById('termsError').classList.add('show');
+        isValid = false;
+      }
+      
+      // If valid, show success
+      if (isValid) {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+        
+        // Scroll to top of success message
+        window.scrollTo({ top: 100, behavior: 'smooth' });
+        
+        // Here you would normally send the form data to your server
+        console.log('Form submitted successfully!');
+      }
+    });
+
+    // Add your existing dropdown script here
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownButton = document.querySelector('.dropdown-button');
+      
+      const backdrop = document.createElement('div');
+      backdrop.className = 'dropdown-backdrop';
+      document.body.appendChild(backdrop);
+      
+      dropdownButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        if (dropdown.classList.contains('active')) {
+          closeDropdown();
+        } else {
+          openDropdown();
+        }
+      });
+      
+      backdrop.addEventListener('click', function() {
+        closeDropdown();
+      });
+      
+      document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+          closeDropdown();
+        }
+      });
+      
+      dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+      
+      function openDropdown() {
+        dropdown.classList.add('active');
+        backdrop.classList.add('active');
+      }
+      
+      function closeDropdown() {
+        dropdown.classList.remove('active');
+        backdrop.classList.remove('active');
+      }
+      
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && dropdown.classList.contains('active')) {
+          closeDropdown();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

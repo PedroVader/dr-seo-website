@@ -14,27 +14,74 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   
-    // ===== EFECTO SCROLL EN NAVBAR =====
-    const navbar = document.querySelector('.navbar-container');
-    let lastScrollY = window.scrollY;
-  
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(20, 20, 20, 0.98)';
-        navbar.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-        navbar.style.transform = 'translateY(0)';
+// ===== EFECTO SCROLL EN NAVBAR =====
+const navbar = document.querySelector('.navbar-container');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    navbar.style.background = 'rgba(20, 20, 20, 0.95)';
+    navbar.style.backdropFilter = 'blur(20px)';
+    navbar.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+  } else {
+    navbar.style.background = 'transparent';
+    navbar.style.backdropFilter = 'blur(20px)';
+    navbar.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+  }
+});
+
+    // ===== DROPDOWN FUNCTIONALITY =====
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownButton = document.querySelector('.dropdown-button');
+    
+    // Create backdrop element
+    const backdrop = document.createElement('div');
+    backdrop.className = 'dropdown-backdrop';
+    document.body.appendChild(backdrop);
+    
+    // Toggle dropdown
+    dropdownButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      
+      if (dropdown.classList.contains('active')) {
+        closeDropdown();
       } else {
-        navbar.style.background = 'rgba(30, 30, 30, 0.95)';
-        navbar.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+        openDropdown();
       }
-  
-      // Ocultar navbar al hacer scroll hacia abajo, mostrar al subir
-      if (window.scrollY > lastScrollY && window.scrollY > 100) {
-        navbar.style.transform = 'translateY(-100%)';
-      } else {
-        navbar.style.transform = 'translateY(0)';
+    });
+    
+    // Close dropdown when clicking backdrop
+    backdrop.addEventListener('click', function() {
+      closeDropdown();
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target)) {
+        closeDropdown();
       }
-      lastScrollY = window.scrollY;
+    });
+    
+    // Prevent dropdown from closing when clicking inside it
+    dropdown.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+    
+    // Functions to open and close dropdown
+    function openDropdown() {
+      dropdown.classList.add('active');
+      backdrop.classList.add('active');
+    }
+    
+    function closeDropdown() {
+      dropdown.classList.remove('active');
+      backdrop.classList.remove('active');
+    }
+    
+    // Close dropdown when pressing Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && dropdown.classList.contains('active')) {
+        closeDropdown();
+      }
     });
   
     // ===== ANIMACIONES AL HACER SCROLL =====
