@@ -322,4 +322,78 @@
     });
   </script>
 </body>
+<style>
+    /* Mobile Navbar Fix - Inline Styles */
+  @media (max-width: 768px) {
+    /* Fix navbar positioning */
+    .navbar-container {
+      position: fixed !important;
+      top: 10px !important;
+      left: 10px !important;
+      right: 10px !important;
+      transform: none !important;
+      width: auto !important;
+      max-width: none !important;
+      padding: 10px 16px !important;
+      background: transparent;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 25px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      z-index: 9999 !important;
+    }
+
+    /* Adjust logo size */
+    .navbar-logo img {
+      width: 120px !important;
+    }
+
+    /* Hide phone button on mobile */
+    .cta-button-phone {
+      display: none !important;
+    }
+
+    /* Fix dropdown button */
+    .dropdown-button {
+      padding: 8px 12px !important;
+      font-size: 0.875rem !important;
+    }
+
+    /* Fix dropdown content positioning */
+    .dropdown-content {
+      position: absolute !important;
+      top: calc(100% + 8px) !important;
+      left: auto !important;
+      right: 0 !important;
+      transform: translateY(0) !important;
+      max-width: calc(100vw - 40px) !important;
+      margin-right: -10px !important;
+    }
+
+    /* Adjust form section for fixed navbar */
+    .services-section {
+      margin-top: 80px !important;
+    }
+  }
+
+  /* Small mobile devices */
+  @media (max-width: 480px) {
+    .navbar-container {
+      left: 8px !important;
+      right: 8px !important;
+      padding: 8px 12px !important;
+    }
+
+    .navbar-logo img {
+      width: 100px !important;
+    }
+  }
+
+  /* Global overflow fix */
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+</style>
 </html>

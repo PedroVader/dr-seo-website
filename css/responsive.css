@@ -1,4 +1,4 @@
-/* ===== MOBILE RESPONSIVE STYLES ===== */
+/* ===== COMPLETE RESPONSIVE STYLES FOR ALL PAGES ===== */
 
 /* Global overflow fix */
 html, body {
@@ -13,7 +13,7 @@ html, body {
     overflow-x: hidden !important;
   }
 
-  /* ===== NAVBAR MOBILE ===== */
+  /* ===== NAVBAR MOBILE - UNIVERSAL FIX ===== */
   .navbar-container {
     position: fixed !important;
     top: 10px !important;
@@ -23,6 +23,16 @@ html, body {
     width: auto !important;
     max-width: none !important;
     padding: 10px 16px !important;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
   }
 
   .navbar-logo img {
@@ -41,6 +51,17 @@ html, body {
   .dropdown-button {
     padding: 8px 12px !important;
     font-size: 0.875rem !important;
+  }
+
+  /* Fix dropdown positioning */
+  .dropdown-content {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: auto !important;
+    right: 0 !important;
+    transform: translateY(0) !important;
+    max-width: calc(100vw - 40px) !important;
+    margin-right: -10px !important;
   }
 
   /* ===== HERO SECTION MOBILE ===== */
@@ -379,6 +400,62 @@ html, body {
     flex-wrap: wrap !important;
   }
 
+  /* ===== CONTACT FORM SECTION ===== */
+  .services-section[style*="min-height: 100vh"] {
+    padding: 2rem 1rem !important;
+    min-height: calc(100vh - 80px) !important;
+    margin-top: 80px !important; /* Account for fixed navbar */
+  }
+
+  /* Form Container */
+  form.service-card-spectacular {
+    padding: 1.5rem !important;
+  }
+
+  /* Form Title */
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Form Grid - Stack on mobile */
+  form > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Form Inputs */
+  .form-input {
+    padding: 0.875rem 1rem !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+
+  /* Submit Button */
+  button[type="submit"] {
+    padding: 0.875rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* Success Message */
+  #successMessage {
+    padding: 1.5rem !important;
+  }
+
+  #successMessage svg {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  #successMessage h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Terms Checkbox */
+  input[type="checkbox"] {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
+
   /* ===== TEXT SIZE ADJUSTMENTS ===== */
   .text-6xl {
     font-size: 2.5rem !important;
@@ -408,6 +485,7 @@ html, body {
   .gradient-text {
     font-size: 2.5rem !important;
     line-height: 1.2 !important;
+    white-space: normal !important;
   }
 
   .gradient-text-medium {
@@ -516,6 +594,36 @@ html, body {
   footer img {
     max-width: 120px !important;
   }
+
+  /* Contact form adjustments */
+  form.service-card-spectacular {
+    padding: 1.25rem !important;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  h1 span {
+    display: block !important; /* Stack the title words */
+  }
+
+  /* Even smaller form inputs */
+  .form-input {
+    padding: 0.75rem 0.875rem !important;
+  }
+
+  /* Smaller submit button */
+  button[type="submit"] {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  button[type="submit"] svg {
+    width: 1rem !important;
+    height: 1rem !important;
+  }
 }
 
 /* Landscape Mobile */
@@ -532,6 +640,17 @@ html, body {
   .hero-content h2 {
     font-size: 2rem !important;
   }
+
+  /* Contact form in landscape */
+  .services-section[style*="min-height: 100vh"] {
+    padding: 1.5rem 1rem !important;
+    margin-top: 70px !important;
+  }
+
+  form.service-card-spectacular {
+    max-height: calc(100vh - 100px) !important;
+    overflow-y: auto !important;
+  }
 }
 
 /* Touch Device Optimizations */
@@ -539,7 +658,9 @@ html, body {
   /* Make touch targets larger */
   .cta-button,
   .cta-button-secondary,
-  .dropdown-button {
+  .dropdown-button,
+  .form-input,
+  button[type="submit"] {
     min-height: 44px !important;
     display: inline-flex !important;
     align-items: center !important;
@@ -553,6 +674,11 @@ html, body {
   .logo-item:hover {
     opacity: 0.6 !important;
   }
+
+  /* Better checkbox touch target */
+  label[for="terms"] {
+    padding: 8px 0 !important;
+  }
 }
 
 /* Fix for iOS Safari */
@@ -563,5 +689,20 @@ html, body {
 
   .navbar-container {
     -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Prevent iOS zoom on input focus */
+  .form-input,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* iOS specific overflow fix */
+  html, body {
+    position: relative !important;
+    overflow-x: hidden !important;
   }
 }
