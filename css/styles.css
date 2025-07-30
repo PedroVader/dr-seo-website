@@ -13,12 +13,20 @@ body {
 }
 
 /* ===== NAVBAR ===== */
+/* ===== NAVBAR ===== */
+/* ===== NAVBAR ===== */
 .navbar-container {
   position: fixed !important;
   top: 10px !important;
   left: 50% !important;
   transform: translateX(-50%);
   z-index: 9999 !important;
+  background: transparent !important; /* Fully transparent */
+  /* Remove all blur and filters */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important; /* Remove border */
+  box-shadow: none !important; /* Remove shadow */
   border-radius: 25px;
   padding: 12px 24px;
   max-width: 1000px;
@@ -26,6 +34,17 @@ body {
   transition: all 0.3s ease;
   box-sizing: border-box !important;
   margin: 0 !important;
+}
+
+/* Ensure it stays fully transparent on scroll */
+.navbar-container.scrolled,
+.navbar-container.navbar-scrolled,
+.navbar-container.is-scrolled {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-brand {
