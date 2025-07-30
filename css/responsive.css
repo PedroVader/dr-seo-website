@@ -79,11 +79,55 @@
     font-size: 0.75rem !important;
   }
 
-  /* ===== VIDEO BACKGROUND MOBILE ===== */
+/* ===== VIDEO BACKGROUND MOBILE ===== */
+@media (max-width: 768px) {
   .background-video {
-    display: none; /* Hide video on mobile for performance */
+    /* Don't hide the video */
+    display: block;
+    
+    /* Ensure it covers the viewport properly */
+    object-fit: cover;
+    object-position: center;
+    
+    /* Set explicit dimensions */
+    width: 100%;
+    height: 100%;
+    
+    /* Ensure proper positioning */
+    position: absolute;
+    top: 0;
+    left: 0;
   }
+  
+  /* Make sure the video container is properly sized */
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
 
+@media (max-width: 768px) {
+  .background-video {
+    display: block;
+    
+    /* Add will-change for better performance */
+    will-change: transform;
+    
+    /* Ensure smooth playback */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Optional: Reduce video quality/size on mobile */
+  .video-hero-wrapper {
+    /* Limit the height on mobile to reduce load */
+    max-height: 100vh;
+  }
+}
   .video-overlay {
     background: linear-gradient(
       135deg,
