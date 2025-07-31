@@ -36,6 +36,10 @@ body {
     width: calc(100% - 1rem) !important;
     max-width: none !important;
     padding: 0.75rem 1rem !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 1rem !important;
     flex-wrap: wrap;
     justify-content: center;
@@ -50,6 +54,10 @@ body {
   /* Hide phone button, show only essential items */
   .cta-button-phone {
     display: none !important;
+  }
+
+  #contactForm .cta-button-phone {
+    display: flex !important;
   }
 
   /* Compact buttons */
@@ -206,6 +214,10 @@ body {
 
   .services-section.py-20 {
     padding-top: 100px !important;
+  }
+
+  .dropdown-button {
+    scale: 0.8;
   }
 }
 
