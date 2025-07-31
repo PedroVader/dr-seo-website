@@ -1,288 +1,300 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-black text-white">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Teleport Massive</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Teleport Massive</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/responsive.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body class="font-sans antialiased bg-black text-white">
-  <!-- Navbar -->
-  <header class="w-full relative z-50">
+<!-- Navbar -->
+<header class="w-full relative z-50">
     <div class="navbar-container flex justify-between items-center">
-      <a href="/" class="navbar-logo">
+    <a href="/" class="navbar-logo">
         <img src="/public/img/logo-tm-bg-removed.png" alt="Logo" style="width: 300px; height: auto;">
-      </a>
-      <div class="flex items-center gap-4">
+    </a>
+    <div class="flex items-center gap-4">
         <!-- Dropdown -->
         <div class="dropdown relative">
-          <button class="dropdown-button flex items-center px-4 py-2 rounded" style="font-size: x-large !important;">
+        <button class="dropdown-button flex items-center px-4 py-2 rounded" style="font-size: x-large !important;">
             Services
             <svg class="w-4 h-4 ml-1 dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg>
-          </button>
-          <div class="dropdown-content">
+        </button>
+        <div class="dropdown-content">
             <div class="py-2">
-              <a href="/digital-marketing/" class="dropdown-item">Digital Marketing</a>
-              <a href="/public-relations/" class="dropdown-item">Public Relations</a>
-              <a href="/reputation-management/" class="dropdown-item">Reputation Management</a>
+            <a href="/digital-marketing/" class="dropdown-item">Digital Marketing</a>
+            <a href="/public-relations/" class="dropdown-item">Public Relations</a>
+            <a href="/reputation-management/" class="dropdown-item">Reputation Management</a>
             </div>
-          </div>
+        </div>
         </div>
         <a href="tel:+12345678900" class="cta-button-phone">
-          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-          </svg>
-          +1 (234) 567-8900
+        </svg>
+        +1 (234) 567-8900
         </a>
-      </div>
     </div>
-  </header>
+    </div>
+</header>
 
-  <!-- Contact Form Section -->
-  <section class="services-section min-h-screen flex items-center justify-center py-20 px-6">
+<!-- Contact Form Section -->
+<section class="services-section min-h-screen flex items-center justify-center py-20 px-6">
     <div class="services-background"></div>
     <div class="services-overlay"></div>
     
     <div class="w-full max-w-2xl relative z-10">
-      <!-- Title -->
-      <div class="text-center mb-12">
+    <!-- Title -->
+    <div class="text-center mb-12">
         <h1 class="text-5xl md:text-6xl font-bold mb-4">
-          <span class="gradient-text">Get In</span> 
-          <span class="gradient-violet">Touch</span>
+        <span class="gradient-text">Get In</span> 
+        <span class="gradient-violet">Touch</span>
         </h1>
         <p class="text-xl text-gray-400">
-          Let's discuss how we can help grow your business
+        Let's discuss how we can help grow your business
         </p>
-      </div>
+    </div>
 
-      <!-- Form -->
-      <form id="contactForm" class="service-card-spectacular" style="padding: 2.5rem;">
+    <!-- Form -->
+    <form id="contactForm" class="service-card-spectacular" style="padding: 2.5rem;">
         <!-- Name Row -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div>
+        <div>
             <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">
-              First Name <span class="text-purple-400">*</span>
+            First Name <span class="text-purple-400">*</span>
             </label>
             <input 
-              type="text" 
-              id="firstName" 
-              name="firstName"
-              required
-              class="form-input"
-              placeholder="John"
+            type="text" 
+            id="firstName" 
+            name="firstName"
+            required
+            class="form-input"
+            placeholder="John"
             >
-          </div>
-          <div>
+        </div>
+        <div>
             <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">
-              Last Name <span class="text-purple-400">*</span>
+            Last Name <span class="text-purple-400">*</span>
             </label>
             <input 
-              type="text" 
-              id="lastName" 
-              name="lastName"
-              required
-              class="form-input"
-              placeholder="Doe"
+            type="text" 
+            id="lastName" 
+            name="lastName"
+            required
+            class="form-input"
+            placeholder="Doe"
             >
-          </div>
+        </div>
         </div>
 
         <!-- Email -->
         <div class="mb-6">
-          <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
             Email Address <span class="text-purple-400">*</span>
-          </label>
-          <input 
+        </label>
+        <input 
             type="email" 
             id="email" 
             name="email"
             required
             class="form-input"
             placeholder="john.doe@example.com"
-          >
-          <p class="error-message" id="emailError">Please enter a valid email address</p>
+        >
+        <p class="error-message" id="emailError">Please enter a valid email address</p>
         </div>
 
         <!-- Phone -->
         <div class="mb-6">
-          <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
+        <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">
             Phone Number <span class="text-purple-400">*</span>
-          </label>
-          <input 
+        </label>
+        <input 
             type="tel" 
             id="phone" 
             name="phone"
             required
             class="form-input"
             placeholder="+1 (234) 567-8900"
-          >
-          <p class="error-message" id="phoneError">Please enter a valid phone number</p>
+        >
+        <p class="error-message" id="phoneError">Please enter a valid phone number</p>
         </div>
 
         <!-- Message -->
         <div class="mb-6">
-          <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
+        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
             Message <span class="text-purple-400">*</span>
-          </label>
-          <textarea 
+        </label>
+        <textarea 
             id="message" 
             name="message"
             required
             rows="4"
             class="form-input resize-none"
             placeholder="Tell us about your project..."
-          ></textarea>
+        ></textarea>
         </div>
 
         <!-- Terms Checkbox -->
         <div class="mb-8">
-          <label class="flex items-start cursor-pointer">
+        <label class="flex items-start cursor-pointer">
             <input 
-              type="checkbox" 
-              id="terms" 
-              name="terms"
-              required
-              class="mt-1 w-5 h-5 bg-black/50 border-2 border-gray-600 rounded cursor-pointer accent-purple-500"
+            type="checkbox" 
+            id="terms" 
+            name="terms"
+            required
+            class="mt-1 w-5 h-5 bg-black/50 border-2 border-gray-600 rounded cursor-pointer accent-purple-500"
             >
             <span class="ml-3 text-sm text-gray-400 leading-relaxed">
-              I agree to the <a href="/terms" class="text-purple-400 hover:text-purple-300 underline">Terms of Service</a> 
-              and give permission to contact me regarding my inquiry.
-              <span class="text-purple-400">*</span>
+            I agree to the <a href="/terms" class="text-purple-400 hover:text-purple-300 underline">Terms of Service</a> 
+            and give permission to contact me regarding my inquiry.
+            <span class="text-purple-400">*</span>
             </span>
-          </label>
-          <p class="error-message" id="termsError">You must accept the terms to continue</p>
+        </label>
+        <p class="error-message" id="termsError">You must accept the terms to continue</p>
         </div>
 
         <!-- Submit Button -->
         <button 
-          type="submit" 
-          class="cta-button-phone w-full justify-center py-4 text-lg font-semibold flex items-center"
+        type="submit" 
+        class="cta-button-phone w-full justify-center py-4 text-lg font-semibold flex items-center"
         >
-          Send Message
-          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        Send Message
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-          </svg>
-        </button>
-      </form>
-
-      <!-- Success Message (Hidden by default) -->
-      <div id="successMessage" class="service-card-spectacular hidden mt-8 p-8 text-center" style="background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.3);">
-        <svg class="w-16 h-16 mx-auto mb-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
         </svg>
-        <h3 class="text-2xl font-bold text-green-500 mb-2">Message Sent!</h3>
-        <p class="text-gray-400">We'll get back to you within 24 hours.</p>
-      </div>
+        </button>
+    </form>
     </div>
-  </section>
+</section>
 
-  <style>
+<style>
     /* Form Input Styles */
     .form-input {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background: rgba(0, 0, 0, 0.5);
-      border: 1px solid #374151;
-      border-radius: 0.5rem;
-      color: white;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      outline: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #374151;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
     }
     
     .form-input:focus {
-      border-color: #8B5CF6;
-      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
     }
     
     .form-input::placeholder {
-      color: #6B7280;
+    color: #6B7280;
     }
     
     /* Error Message Styles */
     .error-message {
-      margin-top: 0.25rem;
-      font-size: 0.75rem;
-      color: #EF4444;
-      display: none;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: #EF4444;
+    display: none;
     }
     
     .error-message.show {
-      display: block;
+    display: block;
     }
-  </style>
+</style>
 
-  <script>
+<script>
     // Form Validation
     document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Reset errors
-      document.querySelectorAll('.error-message').forEach(error => error.classList.remove('show'));
-      
-      let isValid = true;
-      
-      // Email validation
-      const email = document.getElementById('email').value;
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
+    e.preventDefault();
+    
+    // Reset errors
+    document.querySelectorAll('.error-message').forEach(error => error.classList.remove('show'));
+    
+    let isValid = true;
+    
+    // Email validation
+    const email = document.getElementById('email').value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
         document.getElementById('emailError').classList.add('show');
         isValid = false;
-      }
-      
-      // Phone validation
-      const phone = document.getElementById('phone').value;
-      const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-      if (!phoneRegex.test(phone) || phone.length < 10) {
+    }
+    
+    // Phone validation
+    const phone = document.getElementById('phone').value;
+    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+    if (!phoneRegex.test(phone) || phone.length < 10) {
         document.getElementById('phoneError').classList.add('show');
         isValid = false;
-      }
-      
-      // Terms validation
-      const terms = document.getElementById('terms').checked;
-      if (!terms) {
+    }
+    
+    // Terms validation
+    const terms = document.getElementById('terms').checked;
+    if (!terms) {
         document.getElementById('termsError').classList.add('show');
         isValid = false;
-      }
-      
-      // If valid, show success
-      if (isValid) {
-        document.getElementById('contactForm').style.display = 'none';
-        document.getElementById('successMessage').style.display = 'block';
-        
-        // Scroll to top of success message
-        window.scrollTo({ top: 100, behavior: 'smooth' });
-        
+    }
+    
+    // If valid, redirect to thank you page
+    if (isValid) {
         // Here you would normally send the form data to your server
+        // For example:
+        // const formData = new FormData(this);
+        // fetch('/api/contact', {
+        //     method: 'POST',
+        //     body: formData
+        // }).then(response => {
+        //     if (response.ok) {
+        //         window.location.href = '/thank-you/index.html';
+        //     }
+        // });
+        
+        // For now, we'll just redirect directly
         console.log('Form submitted successfully!');
-      }
+        
+        // Optionally, store form data in sessionStorage to display on thank you page
+        const formData = {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Note: sessionStorage is not available in Claude artifacts
+        // In production, you would use: sessionStorage.setItem('formData', JSON.stringify(formData));
+        
+        // Redirect to thank you page
+        window.location.href = '/thank-you/index.html';
+    }
     });
 
     // Dropdown functionality
     document.addEventListener('DOMContentLoaded', function() {
-      const dropdown = document.querySelector('.dropdown');
-      const dropdownButton = document.querySelector('.dropdown-button');
-      
-      const backdrop = document.createElement('div');
-      backdrop.className = 'dropdown-backdrop';
-      document.body.appendChild(backdrop);
-      
-      dropdownButton.addEventListener('click', function(e) {
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownButton = document.querySelector('.dropdown-button');
+    
+    const backdrop = document.createElement('div');
+    backdrop.className = 'dropdown-backdrop';
+    document.body.appendChild(backdrop);
+    
+    dropdownButton.addEventListener('click', function(e) {
         e.stopPropagation();
         dropdown.classList.toggle('active');
         backdrop.classList.toggle('active');
-      });
-      
-      backdrop.addEventListener('click', function() {
+    });
+    
+    backdrop.addEventListener('click', function() {
         dropdown.classList.remove('active');
         backdrop.classList.remove('active');
-      });
     });
-  </script>
+    });
+</script>
 </body>
 </html>
