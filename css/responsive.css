@@ -41,6 +41,9 @@ body {
     -webkit-backdrop-filter: blur(10px) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 1rem !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 
   .navbar-logo img {
@@ -211,6 +214,7 @@ body {
   /* Even more compact navbar */
   .navbar-container {
     padding: 0.625rem 0.75rem !important;
+    gap: 0;
   }
 
   .navbar-logo img {

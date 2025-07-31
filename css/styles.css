@@ -399,7 +399,6 @@ body {
   padding-top: 0.15rem;
   padding-bottom: 0.15rem;
   box-sizing: border-box;
-  white-space: nowrap;
   animation: gradient-shift 5s ease infinite;
 }
 
@@ -476,7 +475,7 @@ body {
   text-shadow: 0 0 20px rgba(246, 246, 246, 0.3);
 }
 
-/* ===== SECCIÓN DE SERVICIOS ===== */
+/* ===== SECCIÃ“N DE SERVICIOS ===== */
 .services-section {
   position: relative;
   padding: 8rem 0;
@@ -625,7 +624,7 @@ body {
   opacity: 1;
 }
 
-/* ===== SECCIÓN CTA ===== */
+/* ===== SECCIÃ“N CTA ===== */
 .services-cta {
   position: relative;
   text-align: center;
@@ -755,7 +754,7 @@ body {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== ESTADÍSTICAS ===== */
+/* ===== ESTADÃSTICAS ===== */
 .stats-card {
   padding: 2rem 1rem;
   transition: transform 0.3s ease;
@@ -928,8 +927,8 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
-/* ===== RESPONSIVE BÁSICO ===== */
-/* Detalles más específicos en responsive.css */
+/* ===== RESPONSIVE BÃSICO ===== */
+/* Detalles mÃ¡s especÃ­ficos en responsive.css */
 @media (max-width: 768px) {
   .navbar-container {
     width: calc(100vw - 20px);
