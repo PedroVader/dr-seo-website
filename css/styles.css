@@ -452,6 +452,10 @@ body {
   display: inline-block !important;
   background-size: 200% 200%;
   animation: gradient-shift 5s ease infinite;
+  line-height: 1.2 !important;
+padding-bottom: 0.1em !important;
+vertical-align: baseline !important;
+overflow: visible !important;
 }
 /* Make sure the animation is defined */
 @keyframes gradient-shift {
